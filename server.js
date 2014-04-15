@@ -21,10 +21,6 @@
 		text : String
 	})
 
-	//listen (start app with node server.js) ==================
-	app.listen(8080);
-	console.log("App listening to port 8080");
-
 // routes =====================================================
 
 	//api
@@ -80,3 +76,12 @@
 			});
 		});
 	});	
+
+	// application
+	app.get('*', function(req, res){
+		res.sendfile('./public/index.html');
+	});
+
+	//listen (start app with node server.js) ==================
+	app.listen(8080);
+	console.log("App listening to port 8080");
