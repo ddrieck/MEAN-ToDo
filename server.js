@@ -7,7 +7,7 @@
 
 	//configuration ========
 	
-	mongoose.connect('mongodb://ddrieck:gSxEDQS9Zspu@oceanic.mongohq.com:10027/powerful-atoll');
+	mongoose.connect('mongodb://testuser:t3stdbpswd@oceanic.mongohq.com:10027/powerful-atoll');
 
 	app.configure(function() {
 		app.use(express.static(__dirname + '/public'));
