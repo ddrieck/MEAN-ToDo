@@ -63,7 +63,7 @@
 	//delete a todo
 	app.delete('/api/todos/:todos_id', function(req,res){
 		Todo.remove({
-			_id : req.params.todos_id
+			_id : req.params.todos_id,
 		}, function(err, todo) {
 			if (err)
 				res.send(err);

@@ -6,7 +6,7 @@ function mainController($scope, $http) {
 
 	//when landing on page, get all todos and show them
 	$http.get('/api/todos')
-		.succes(function(data){
+		.success(function(data){
 			$scope.todos = data;
 			console.log(data);
 		})
@@ -29,7 +29,7 @@ function mainController($scope, $http) {
 
 	//delete a todo after checking it
 	$scope.deleteTodo = function(id){
-		$http.delete('/api/todos' + id)
+		$http.delete('/api/todos/' + id)
 			.success(function(data){
 				$scope.todos = data;
 				console.log(data);
